@@ -6,6 +6,7 @@ export function createComponentRegistry() {
         return getAll().filter(component => component.type === desiredType);
     }
 
+    
     function broadcastToAll(command) {
         registry.forEach(component => {
             if (component.instance[command]) {
